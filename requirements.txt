@@ -1,0 +1,6 @@
+youtool
+pymongo
+python-dotenv
+matplotlib
+wordcloud
+pandas
