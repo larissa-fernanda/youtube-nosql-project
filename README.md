@@ -65,17 +65,20 @@ youtube_nosql_project/
 git clone https://github.com/seu-usuario/youtube-nosql.git
 cd youtube-nosql
 ```
+
 <ol start="2">
     <li>Crie e ative o ambiente virtual yt-nosql</li>
 </ol>
 
 Linux/macOS:
+
 ```bash
 python3 -m venv yt-nosql
 source yt-nosql/bin/activate
 ```
 
 Windows (CMD):
+
 ```bash
 python -m venv yt-nosql
 yt-nosql\Scripts\activate
@@ -88,6 +91,7 @@ yt-nosql\Scripts\activate
 ```bash
 pip install -r requirements.txt
 ```
+
 <ol start="4">
     <li>Configure as variáveis de ambiente: crie um arquivo `.env` na raiz do projeto com as seguintes variáveis:
 </ol>
@@ -97,6 +101,7 @@ MONGO_URI=mongodb://localhost:27017
 DB_NAME=youtube_nosql
 YT_API_KEYS=ABCKEY
 ```
+
 <p>Você pode usar o arquivo `.env.example` como modelo.</p>
 
 <ol start="5">
@@ -107,6 +112,7 @@ YT_API_KEYS=ABCKEY
 ```bash
 sudo service mongod start
 ```
+
 <ol start="6">
     <li>Execute o script principal:</li>
 </ol>
@@ -114,12 +120,12 @@ sudo service mongod start
 ```bash
 python main.py
 ```
+
 <p align="justify">Você será solicitado a inserir a URL de um canal do YouTube (ex: https://www.youtube.com/c/CanalXYZ)</p>
 
-<h2 id="insights">📈 Exemplos de insights gerados<h2>
+<h2 id="insights">📈 Exemplos de insights gerados</h2>
 
 <ul>
     <li>Gráfico de barras: número de comentários por vídeo.</li>
     <li>Nuvem de palavras: palavras mais frequentes nos comentários.</li>
 </ul>
-
