@@ -1,4 +1,5 @@
 import os
+import pprint
 from dotenv import load_dotenv
 from database.mongo_handler import save_to_collection
 from youtube_extractor.channel_scraper import (
@@ -18,7 +19,7 @@ def main():
     playlist_id = get_upload_playlist_id(channel_id)
     print("🎥 Coletando vídeos do canal...")
     videos = get_uploads_videos(yt, playlist_id, max_results=5)
-
+    
     for video in videos:
         print(f"📥 Coletando dados de: {video['title']}")
         details = extract_video_details(yt, video["id"])
@@ -26,11 +27,17 @@ def main():
             **video,
             **details
         }
-        save_to_collection("videos", record)
 
-    print("✅ Dados salvos no MongoDB.")
-    plot_comment_count()
-    plot_wordcloud()
+        try:
+            save_to_collection("videos", record)
+            print("✅ Dados salvos no MongoDB.")
+            plot_comment_count()
+            plot_wordcloud()
+        except Exception as e:
+            # DEBUG PRINTING
+            print("❌ Error inserting document:")
+            pprint.pprint(record)
+            raise e
 
 if __name__ == "__main__":
     main()
