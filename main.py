@@ -31,13 +31,14 @@ def main():
         try:
             save_to_collection("videos", record)
             print("✅ Dados salvos no MongoDB.")
-            plot_comment_count()
-            plot_wordcloud()
+            
         except Exception as e:
             # DEBUG PRINTING
             print("❌ Error inserting document:")
             pprint.pprint(record)
             raise e
+    plot_comment_count()
+    plot_wordcloud()
 
 if __name__ == "__main__":
     main()
