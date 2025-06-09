@@ -9,6 +9,9 @@
     <a href="#insights">📈 Exemplos de insights gerados</a>
 </p>
 
+<h3>📹 Demonstração:</h3>
+![Demo](/assets/youtools-proj.gif)
+
 <h2 id="about">🤔 Sobre</h2>
 
 <p align="justify">Um projeto prático para coletar, armazenar e analisar dados de vídeos do YouTube usando Python, MongoDB e visualização de dados.</p>
