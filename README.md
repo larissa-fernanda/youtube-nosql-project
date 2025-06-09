@@ -10,7 +10,8 @@
 </p>
 
 <h3>📹 Demonstração:</h3>
-![Demo](assets/youtools-proj.gif)
+
+![Demo](/assets/youtools-proj.gif)
 
 <h2 id="about">🤔 Sobre</h2>
 
